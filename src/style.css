@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
+:root {
+  --font-main: 'JetBrains Mono', monospace;
+  --white: #ffffff;
+  background-color: black;
+  color: var(--white);
+  font-family: monospace
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    background-color: var(--white);
+    color: black;
+  }
+}
+
+h1 {
+  font-family: var(--font-main);
+}
+
+.navbar {
+  font-family: var(--font-main);
+  z-index: 1000;
+  align-items: center;
+  background-color: var(--white);
+  padding: 5px;
+  border: 10px;
+}
