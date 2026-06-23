@@ -1,17 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 :root {
   --font-main: 'JetBrains Mono', monospace;
-  --white: #ffffff;
-  background-color: black;
-  color: var(--white);
-  font-family: monospace
+  --border: transparent;
+}
+
+:root:not([data-theme]) {
+  --font-main: 'JetBrains Mono', monospace;
+  --border: transparent;
+  
+  --bg: black;
+  --fg: white;
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
-    background-color: var(--white);
-    color: black;
+    --bg: white;
+    --fg: black;
   }
+}
+
+:root[data-theme="light"] {
+  --bg: white;
+  --fg: black;
+}
+
+:root[data-theme="dark"] {
+  --bg: black;
+  --fg: white;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 h1 {
@@ -24,9 +44,8 @@ h1 {
   display: flex;
   justify-content: space-between;
 
-  background-color: var(--white);
+  background-color: var(--fg);
   padding: 5px;
-  border: 10px;
 }
 
 .nav-links {
@@ -41,3 +60,19 @@ h1 {
 .nav-links a:hover {
   opacity: 1;
 }
+
+.nav-links button {
+  all: unset;
+  cursor: pointer;
+
+  color: blue;
+  opacity: 0.6;
+  text-decoration: underline;
+  font: inherit;
+  text-transform: inherit;
+}
+
+.nav-links button:hover {
+  opacity: 1;
+}
+
