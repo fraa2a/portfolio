@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fraa™</title>
   </head>
-  <nav class="navbar"> 
-    <div class="logo">
-      <a href="#home"> fraa™ </a>
-    </div>
-
-    <div class="nav-links">
-      <a href="#me">me</a>
-      <a href="#contact">contact</a>
-      <button id="toggle-theme" class="toggle-theme" type="button"> theme </button>
-    </div>
-  </nav>
-
-
   <body>
+    <nav class="navbar"> 
+      <div class="logo">
+        <a href="#home"> fraa™ </a>
+      </div>
+      <div class="nav-links">
+        <a href="#me">me</a>
+        <a href="#contact">contact</a>
+        <button id="toggle-theme" class="toggle-theme" type="button"> theme </button>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="section-me">
+        <h1 id="me">#me</h1>
+        <p>building things that probably should not work, but do.</p>
+      </section>
+      <section class="section-socials">
+        <h1 id="contact"> #socials</h1>
+        <p><iconify-icon class="icon" icon="simple-icons:github"></iconify-icon><a href="github.com">github</a></p>
+      </section>
+      <section class="section-contact">
+        <h1 id="contact"> #contact</h1>
+        <p>you can contact me on my <iconify-icon class="icon" icon="simple-icons:discord"></iconify-icon><a href="https://ds.fraa2a.top">discord server</a> </p> 
+      </section>
+    </main>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

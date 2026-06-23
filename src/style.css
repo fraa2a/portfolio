@@ -29,9 +29,10 @@
   --fg: white;
 }
 
-body {
+body{
   background-color: var(--bg);
   color: var(--fg);
+  padding-inline: 4px;
 }
 
 h1 {
@@ -46,6 +47,7 @@ h1 {
 
   background-color: var(--fg);
   padding: 5px;
+  margin-bottom: 15px;
 }
 
 .nav-links {
@@ -76,3 +78,30 @@ h1 {
   opacity: 1;
 }
 
+main {
+  color: var(--fg);
+  background-color: var(--bg);
+  font-family: var(--font-main);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  margin-block: 15px;
+  color: var(--bg);
+  background-color: var(--fg);
+}
+
+section h1,
+section p {
+  margin: 0;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+
+  transform: translateY(3px);
+}
